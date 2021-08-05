@@ -1,0 +1,258 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+:root{
+    --header_color: white;
+    --black_cool:rgb(35, 43, 43);
+}
+::-webkit-scrollbar{
+    width: .0001px;
+    background-color: var(--header_color);
+}
+body{
+    background-color: rgb(22, 22, 22);
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+/* HEADER */
+
+header{
+    background: url(img/bg.jpg) fixed ;
+    background-size: 1920px 1080px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+}
+header::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0%;
+    background: black;
+    opacity: .7;
+    z-index:-1;
+}
+header a{
+    text-decoration:none;
+    color: var(--header_color);
+}
+header nav {
+    background-color: transparent;
+    height: 15rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    user-select: none;
+}
+header nav ul{
+    margin-left: auto;
+    margin-right: auto;
+}
+header nav ul li {
+    display: inline-flex;
+    margin: 0 3rem;
+}
+header nav ul h1 {
+    color: var(--header_color);
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+header nav ul li a {
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 100;
+    border-bottom: 2px solid white;
+    transition: all .3s, border-radius .9s;
+}
+header nav ul li a:hover {
+    border-radius: 13px;
+    color: var(--black_cool);
+    background-color: white;
+}
+.button{
+    position: absolute;
+    bottom: 6rem;
+    transition: all 1s;
+}
+.button:hover{
+    transform: translateY(2rem);
+}
+.text{
+    background: rgba(0, 0, 0, .5);
+    height: 30%;
+    position: relative;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+.text h1{
+    color: var(--header_color);
+    font-size: 5rem;
+    font-weight: 400;
+}
+.text h2{
+    color: var(--header_color);
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+
+/* MAIN */
+main{
+}
+.about{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.kind{
+    width: 44rem;
+    height: 24rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.favio_container{
+    width: 80%;
+    height: 40%;
+    background-color: rgb(37, 34, 34);
+    box-shadow: 10px 10px 117px -42px rgba(56, 54, 58, 0.75);
+    border-radius: 190px 0 190px 0;
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    align-items: center;
+}
+
+.drawing{
+    width: 20rem;
+    height: 20rem;
+    display: inline-block;
+    background-color: rgb(37, 34, 34);
+    box-shadow: 10px 10px 117px -62px rgba(139, 83, 194, 0.75);
+    border-radius: 15px;
+    margin: 2rem 0;
+    transition: all .5s;
+}
+.drawing:hover{
+    width: 21rem;
+    height: 21rem;
+    box-shadow: 10px 10px 117px -42px rgba(92, 53, 131, 0.75), 10px 10px 117px -42px rgba(92, 53, 131, 0.75);
+    background-color: rgb(37, 34, 34);
+    border-radius: 15px;
+}
+.drawing .align_flex i{
+    font-size: 7rem;
+    color:rgba(131, 41, 221, 0.75);
+    transition: all .5s;
+}
+.drawing:hover .align_flex i{
+    font-size: 9rem;
+    color: rgb(82, 24, 136);
+    padding-top: 2rem;
+}
+.drawing .align_flex h1{
+    font-size: 2rem;
+    color: rgba(131, 41, 221, 0.85);
+    padding-top:3rem ;
+    transition: all .5s;
+}
+.drawing:hover .align_flex h1{
+    font-size: 0;
+    padding-top: 3rem;
+}
+
+.photography{
+    width: 20rem;
+    height: 20rem;
+    background-color: rgb(37, 34, 34);
+    box-shadow: 0px 10px 117px -62px rgba(85, 98, 201, 0.75);
+    border-radius: 15px;
+    margin: 2rem 0;
+    transition: all .5s;
+}
+.photography:hover{
+    width: 21rem;
+    height: 21rem;
+    background-color: rgb(37, 34, 34);
+    box-shadow: 0px 0px 90px -42px rgba(55, 72, 204, 0.75), 0px 0px 90px -42px rgba(55, 72, 204, 0.75);
+    border-radius: 15px;
+}
+.photography .align_flex i{
+    font-size: 7rem;
+    color: rgba(62, 72, 218, 0.75);
+    transition: all .5s;
+}
+.photography:hover .align_flex i{
+    font-size: 9rem;
+    color: rgba(36, 45, 179, 0.75);
+    padding-top: 2rem;
+}
+.photography .align_flex h1{
+    font-size: 2rem;
+    padding-top:3rem;
+    color: rgba(62, 72, 218, 0.85) ;
+    transition: all .5s;
+}
+.photography:hover .align_flex h1{
+    font-size: 0;
+    padding-top: 3rem;
+}
+
+.align_flex{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+.favio_container .favio_img{
+    width: 40%;
+    height: 100%;
+}
+.favio_container .favio_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: -2rem 30%;
+}
+.favio_info{
+    width: 60%;
+    margin: 3rem 5rem 3rem 2rem;
+    border-left: .5rem solid white;
+    padding: 2rem 0 2rem 3rem; 
+}
+.favio_info h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--header_color);
+}
+.favio_info p{
+    font-size: 1.2rem;
+    color: gray;
+}
+.favio_info p span{
+    font-size: 1.3rem;
+    color: rgb(153, 153, 153);
+}
