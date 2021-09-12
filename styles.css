@@ -321,17 +321,22 @@ main{
     transition: all 1s;
 }
 
-.gallery div a h1{
+.gallery div a{
     width: 100%;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+.gallery div a h1{
     position: absolute;
     font-size: 3.5rem;
     color: var(--header_color);
     z-index: 100;
     transition: all 1s;
-    transform: translateY(35rem);
+    transform: translateY(400%);
 }
 .gallery div:hover h1{
-    transform: translateY(-5rem);
+    transform: translateY(-50%);
 }
 
 .gallery div hr{
@@ -343,18 +348,18 @@ main{
     z-index: 100;
 }
 .gallery div .hr_top{
-    top: 115%;
+    top: 125%;
     transition: all 1s;
 }
 .gallery div:hover .hr_top{
-    top: 30%;
+    top: 25%;
 }
 .gallery div .hr_bottom{
-    bottom: -55%;
+    bottom: -75%;
     transition: all 1s;
 }
 .gallery div:hover .hr_bottom{
-    bottom: 30%;
+    bottom: 25%;
 }
 
 .gallery div::after{
@@ -363,7 +368,7 @@ main{
     height: 100%;
     background-color: rgba(0, 0, 0,.5);
     position: absolute;
-    transform: translateY(100% );
+    transform: translateY(100%);
     transition: 1s;
 }
 .gallery div:hover:after{
@@ -388,4 +393,112 @@ main{
     height: 100%;
     object-fit: cover;
     position: absolute;
+}
+
+/* CONTACT SECTION */
+.contact{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact .container{
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    width: 80%;
+    height: 80%;
+    background: linear-gradient(90deg, rgba(22,22,22,1) 5%, rgba(30,30,30,1) 50%, rgba(22,22,22,1) 95%);;
+}
+
+.contact .container .social{
+    width: 40%;
+    height: 50%;
+    background:transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contact .container .social .logos{
+    width:100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.contact .container .social .logos div{
+    margin: 1rem;
+}
+
+.contact .container .social .logos .img_instagram{
+    width: 15%;
+    height: 75%;
+    display: inline-block;
+}
+.contact .container .social .logos .img_instagram a img{
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+.contact .container .social .logos .img_instagram a img:hover{
+    filter: contrast(2);
+}
+
+.contact .container .social .logos .img_facebook{
+    width: 15%;
+    height: 75%;
+    display: inline-block;
+}
+.contact .container .social .logos .img_facebook a img{
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+.contact .container .social .logos .img_facebook:hover a img{
+    filter: contrast(1.5);
+}
+
+.container .social .contact_info{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+    background: linear-gradient(90deg, transparent 0%, rgba(35,35,35,1) 45%, transparent 100%);;
+}
+
+.container .social .contact_info .icons i{
+    display: block;
+    font-size: 3rem;
+    margin: 1rem 0;
+    color: #33456F;
+}
+.container .social .contact_info .icons{
+    display: inline-block;
+    text-align: center;
+    width: 20%;
+    
+}
+.container .social .contact_info .text_info{
+    display: inline-block;
+    width: 50%;
+}
+.container .social .contact_info .text_info p{
+    font-size: 1.5rem;
+    margin:1.7rem 0;
+}
+
+
+
+.contact .container .contact_form{
+    width: 40%;
+    height: 70%;
+    background: white;
 }
