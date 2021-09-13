@@ -436,7 +436,7 @@ main{
 }
 
 .contact .container .social .logos .img_instagram{
-    width: 15%;
+    width: auto;
     height: 75%;
     display: inline-block;
 }
@@ -450,7 +450,7 @@ main{
 }
 
 .contact .container .social .logos .img_facebook{
-    width: 15%;
+    width: auto;
     height: 75%;
     display: inline-block;
 }
@@ -491,14 +491,95 @@ main{
     width: 50%;
 }
 .container .social .contact_info .text_info p{
-    font-size: 1.5rem;
-    margin:1.7rem 0;
+    font-size: 1.3rem;
+    margin:2rem 0;
 }
 
 
 
 .contact .container .contact_form{
-    width: 40%;
+    width: 55%;
     height: 70%;
+    background: transparent;
+}
+.contact .container .contact_form form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: -1rem;
+}
+.contact .container .contact_form form h1{
+    margin-bottom: 3rem;
+    font-size: 3.5rem;
+    color: #fff;
+    padding: 0 1rem;
+    border-radius: 3px;
+    border-bottom: #fff solid .3rem;
+}
+
+.contact .container .contact_form form input{
+    display: block;
+    outline: none;
+    margin-bottom: 1rem;
+    height: 2.8rem;
+    width: 75%;
+    font-size: 1rem;
+    padding-left: .5rem;
+    border: none;
+    border-bottom: #fff solid .3rem;
+    background: linear-gradient(180deg, transparent 0%, rgba(60, 60, 60, 0.09) 90%);
+    color: gray;
+}
+.contact .container .contact_form form input:hover{
+    background: linear-gradient(180deg, transparent 0%, rgba(60, 60,60, 0.2) 100%);
+}
+.contact .container .contact_form form input:focus{
+    background: linear-gradient(180deg, transparent 0%, rgba(60, 60, 60, 0.2) 100%);
+}
+
+.contact .container .contact_form form .submit{
+    display: block;
+    outline: none;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    height: 3rem;
+    width: 40%;
+    background: transparent;
+    padding: 0;
+    border:white solid .2rem;
+    color: white;
+    transition: all .5s;
+}
+
+.contact .container .contact_form form .submit:hover{
+    color: black;
     background: white;
+}
+
+
+
+.contact .container .contact_form form textarea{
+    outline: none;
+    display: block;
+    margin-bottom: 1rem;
+    width: 75%;
+    padding-left: .5rem;
+    padding-top: .5rem;
+    height: 15rem;
+    font-size: 1rem;
+    border: none;
+    border-bottom: #fff solid .3rem;
+    background: linear-gradient(180deg, transparent 0%, rgba(60, 60, 60,.09) 90%);
+    resize: none;
+    color: gray;
+}
+.contact .container .contact_form form textarea:hover{
+    background: linear-gradient(180deg, transparent 0%, rgba(60, 60, 60, 0.2) 100%);
+}
+.contact .container .contact_form form textarea:focus{
+    background: linear-gradient(180deg, transparent 0%, rgba(60, 60, 60, 0.2) 100%);
+    
 }
