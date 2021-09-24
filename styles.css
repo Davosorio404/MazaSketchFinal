@@ -10,7 +10,7 @@
     --black_cool:rgb(35, 43, 43);
 }
 ::-webkit-scrollbar{
-    width: .0001px;
+    width: 0.001px;
     background-color: var(--header_color);
 }
 body{
@@ -21,11 +21,12 @@ a{
     text-decoration: none;
     color: inherit;
 }
+
 /* HEADER */
 
 header{
-    background: url(img/bg.jpg) fixed ;
-    background-size: 1920px 1080px;
+    background: url(img/bg.jpg) fixed no-repeat ;
+    background-size: 100vw 100vh;
     position: relative;
     z-index: 1;
     text-align: center;
@@ -53,14 +54,30 @@ header nav {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     user-select: none;
 }
+.toggle{
+    font-size: 2.5rem;
+    background-color: transparent;
+    color: var(--header_color);
+    border: none;
+    position: absolute;
+    display: none;
+    width: 100%;
+    z-index: 2000;
+    cursor: pointer;
+}
 header nav ul{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
 }
 header nav ul li {
-    display: inline-flex;
+    list-style: none;
     margin: 0 3rem;
 }
 header nav ul h1 {
@@ -83,7 +100,10 @@ header nav ul li a:hover {
 }
 .button{
     position: absolute;
+    font-size: 2.2rem;
+    margin: 0 auto;
     bottom: 10%;
+    right: 49%;
     transition: all 1s;
 }
 .button:hover{
@@ -424,8 +444,8 @@ header nav ul li a:hover {
     justify-content: center;
 }
 .contact .container .social .logos{
-    width:100%;
-    height: 30%;
+    width:18.75rem;
+    height: 6.31rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -609,6 +629,7 @@ header nav ul li a:hover {
         font-size: 1.2rem;
     }
     .favio_container{
+        margin: 4rem 0 0 0;
         border-radius: 170px 0 170px 0;
     }
     .kind{
@@ -617,56 +638,43 @@ header nav ul li a:hover {
     .drawing{
         width: 17rem;
         height: 17rem;
-        display: inline-block;
-        background-color: rgb(37, 34, 34);
-        box-shadow: 10px 10px 117px -62px rgba(139, 83, 194, 0.75);
         margin: 2rem 0 1rem;
-        border-bottom: 10px solid rgb(29, 27, 27);
-        user-select: none;
-        transition: all .5s;
     }
     .drawing:hover{
         width: 18rem;
         height: 18rem;
-        box-shadow: 10px 10px 117px -42px rgba(92, 53, 131, 0.75), 10px 10px 117px -42px rgba(92, 53, 131, 0.75);
-        background-color: rgb(37, 34, 34);
-        border-bottom: 3px solid rgb(29, 27, 27);
     }
     .drawing .align_flex i{
         font-size: 6rem;
-        color:rgba(131, 41, 221, 0.75);
-        transition: all .5s;
     }
     .drawing:hover .align_flex i{
         font-size: 8rem;
-        color: rgb(82, 24, 136);
-        padding-top: 2rem;
     }
     
     .photography{
         width: 17rem;
         height: 17rem;
-        background-color: rgb(37, 34, 34);
-        box-shadow: 0px 10px 117px -62px rgba(85, 98, 201, 0.75);
         margin: 2rem 0 1rem;
-        user-select: none;
-        transition: all .5s;
-        border-bottom: 10px solid rgb(29, 27, 27);
     }
     .photography:hover{
         width: 18rem;
         height: 18rem;
-        background-color: rgb(37, 34, 34);
-        box-shadow: 0px 0px 90px -42px rgba(55, 72, 204, 0.75), 0px 0px 90px -42px rgba(55, 72, 204, 0.75);
-        border-bottom: 3px solid rgb(29, 27, 27);
     }
     .photography .align_flex i{
         font-size: 6rem;
-        color: rgba(62, 72, 218, 0.75);
-        transition: all .5s;
+    }
+    .photography:hover .align_flex i{
+        font-size: 8rem;
+    }
+    .gallery div a h1{
+        font-size: 3rem;
     }
     .container .social .contact_info .text_info p{
         font-size: 1.1rem;
+        margin:2rem 0;
+    }
+    .container .social .contact_info .text_info p:first-child{
+        font-size: 0.94rem;
         margin:2rem 0;
     }
     .container .social .contact_info{
@@ -685,20 +693,110 @@ header nav ul li a:hover {
         margin: 1rem 0;
         color: #33456F;
     }
-    .photography:hover .align_flex i{
-        font-size: 8rem;
-        color: rgba(36, 45, 179, 0.75);
-        padding-top: 2rem;
-    }
-    .gallery div a h1{
+    .contact .container .contact_form form h1{
         font-size: 3rem;
     }
+}
+@media  screen and (max-width: 906px) {
+    .toggle{
+        display: initial;
+    }
+    .toggle_active{
+        background: rgb(22,22,22);
+    }
+
+
+    header nav ul{
+        flex-direction: column;
+        z-index: 1000;
+        position: relative;
+        background: rgb(22,22,22);
+        margin-top: 47%;
+        width: 100%;
+        left: 100%;
+        display: none;
+    }
+    .ul_visible{
+        display: inherit;
+        left: 0;
+    }
+
+
+
+    header nav ul li:first-child{
+        margin-top: 1rem;
+    }
+    header nav ul li:last-child{
+        margin-bottom: 1rem;
+    }
+    header nav ul li{
+        margin-top: 2rem;
+    }
+    .li_visible{
+        display: initial;
+    }
+
+
+    
+    .gallery div a h1{
+        font-size: 2.5rem;
+    }
+    .contact{
+        height: 76.5625rem;
+    }
+    .contact .container{
+        margin: -15rem 0;
+        height: 90%;
+        flex-direction: column;
+    }
+    .contact .container .social{
+        margin: 2rem 0;
+        width: 100%;
+    }
+    .container .container .contact_form{
+        margin: 5rem 0;
+        width: 100%;
+    }
     .contact .container .contact_form form h1{
-    margin-bottom: 3rem;
-    font-size: 3rem;
-    color: #fff;
-    padding: 0 1rem;
-    border-radius: 3px;
-    border-bottom: #fff solid .3rem;
+        font-size: 2.5rem;
+    }
+    .container .social .contact_info .text_info p{
+        font-size: 1.3rem;
+        margin:2rem 0;
+    }
+    .container .social .contact_info .text_info p:first-child{
+        font-size: 1.3rem;
+        margin:2rem 0;
+    }
 }
-}
+/* @media  screen and (max-width: 768px) {
+    .toggle{
+        display: initial;
+    }
+    
+    header nav ul{
+        display: none;
+    }
+    .gallery div a h1{
+        font-size: 2.5rem;
+    }
+    .contact{
+        height: 76.5625rem;
+    }
+    .contact .container{
+        margin: -15rem 0;
+        height: 90%;
+        flex-direction: column;
+    }
+    .contact .container .social{
+        margin: 2rem 0;
+        width: 100%;
+    }
+    .container .container .contact_form{
+        margin: 5rem 0;
+        width: 100%;
+    }
+    .contact .container .contact_form form h1{
+        font-size: 2.5rem;
+    }
+} */
