@@ -489,7 +489,7 @@ header nav ul li a:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     color: gray;
     background: linear-gradient(90deg, transparent 0%, rgba(35,35,35,1) 45%, transparent 100%);;
 }
@@ -512,14 +512,14 @@ header nav ul li a:hover {
 }
 .container .social .contact_info .text_info p{
     font-size: 1.2rem;
-    margin:2rem 0;
+    margin: 1rem 0;
 }
 
 
 
 .contact .container .contact_form{
     width: 55%;
-    height: 70%;
+    height: 80%;
     background: transparent;
 }
 .contact .container .contact_form form{
@@ -670,22 +670,12 @@ header nav ul li a:hover {
         font-size: 3rem;
     }
     .container .social .contact_info .text_info p{
-        font-size: 1.1rem;
-        margin:2rem 0;
-    }
-    .container .social .contact_info .text_info p:first-child{
         font-size: 0.94rem;
         margin:2rem 0;
     }
     .container .social .contact_info{
-        width: 100%;
-        height: 70%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        width: 60%;
         justify-content: center;
-        color: gray;
-        background: linear-gradient(90deg, transparent 0%, rgba(35,35,35,1) 45%, transparent 100%);;
     }
     .container .social .contact_info .icons i{
         display: block;
@@ -704,8 +694,6 @@ header nav ul li a:hover {
     .toggle_active{
         background: rgb(22,22,22);
     }
-
-
     header nav ul{
         flex-direction: column;
         z-index: 1000;
@@ -720,9 +708,6 @@ header nav ul li a:hover {
         display: inherit;
         left: 0;
     }
-
-
-
     header nav ul li:first-child{
         margin-top: 1rem;
     }
@@ -759,13 +744,9 @@ header nav ul li a:hover {
     }
     .container .social .contact_info .text_info p{
         font-size: 1.3rem;
-        margin:2rem 0;
-    }
-    .container .social .contact_info .text_info p:first-child{
-        font-size: 1.3rem;
-        margin:2rem 0;
     }
 }
+
 /* @media  screen and (max-width: 768px) {
     .toggle{
         display: initial;
@@ -797,3 +778,96 @@ header nav ul li a:hover {
         font-size: 2.5rem;
     }
 } */
+
+@media  screen and (max-height: 680px) {
+    
+    header nav ul li a {
+        font-size: 1.2rem;
+        font-weight: 100;
+    }
+    .text h1{
+        font-size: 4.3rem;
+        font-weight: 400;
+    }
+    .text h2{
+        font-size: 1.3rem;
+    }
+    .button{
+        font-size: 2rem;
+    }
+    .favio_container{
+        margin: 4rem 0 0 0;
+        border-radius: 170px 0 170px 0;
+    }
+    .kind{
+        width: 30rem;
+    }
+    .drawing{
+        width: 13rem;
+        height: 13rem;
+        margin: 2rem 0 0;
+    }
+    .drawing:hover{
+        width: 15rem;
+        height: 15rem;
+    }
+    .drawing .align_flex i{
+        padding-top: 1rem;
+        font-size: 5rem;
+    }
+    .drawing:hover .align_flex i{
+        font-size: 6rem;
+    }
+    .drawing .align_flex h1{
+        font-size: 1.6rem;
+        padding-top: 1rem;
+    }
+    
+    .photography{
+        width: 13rem;
+        height: 13rem;
+        margin: 2rem 0 0;
+    }
+    .photography:hover{
+        width: 15rem;
+        height: 15rem;
+    }
+    .photography .align_flex i{
+        padding-top: 1rem;
+        font-size: 5rem;
+    }
+    .photography:hover .align_flex i{
+        font-size: 6rem;
+    }
+    .photography .align_flex h1{
+        font-size: 1.6rem;
+        padding-top: 1rem;
+    }
+    .gallery div a h1{
+        font-size: 3rem;
+    }
+    
+    .contact{
+        height: 76.5625rem;
+    }
+    .contact .container{
+        margin: -15rem 0;
+        height: 90%;
+        flex-direction: column;
+    }
+    .contact .container .social{
+        margin: 2rem 0;
+        width: 100%;
+    }
+    .container .container .contact_form{
+        margin: 5rem 0;
+        width: 100%;
+    }
+    .contact .container .contact_form form h1{
+        font-size: 2.5rem;
+    }
+    .container .social .contact_info .text_info p{
+        font-size: 1.3rem;
+    }
+
+}
