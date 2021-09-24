@@ -846,6 +846,9 @@ header nav ul li a:hover {
     .gallery div a h1{
         font-size: 3rem;
     }
+    .about hr{
+        margin-top: 2rem;
+    }
     
     .contact{
         height: 76.5625rem;
