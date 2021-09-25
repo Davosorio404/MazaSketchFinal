@@ -25,8 +25,8 @@ a{
 /* HEADER */
 
 header{
-    background: url(img/bg.jpg) fixed no-repeat ;
-    background-size: 100vw 100vh;
+    background: url(img/bg.jpg) fixed;
+    background-size: cover;
     position: relative;
     z-index: 1;
     text-align: center;
@@ -166,7 +166,7 @@ header nav ul li a:hover {
     background-color: rgb(37, 34, 34);
     box-shadow: 10px 10px 117px -42px rgba(56, 54, 58, 0.75);
     border-radius: 190px 0 190px 0;
-    margin: 3rem 0 0 0;
+    margin: 4rem 0 0 0;
     display: flex;
     flex-direction: row;
     overflow: hidden;
@@ -327,7 +327,7 @@ header nav ul li a:hover {
 }
 
 .gallery div{
-    background: var(--header_color) ;
+    background: transparent ;
     width: 23%;
     height: 80%;
     border-radius: 5px;
@@ -339,21 +339,26 @@ header nav ul li a:hover {
     align-items: center;
     overflow: hidden;
     transition: all 1s;
+    outline: none;
 }
 
-.gallery div a{
+.gallery div button{
     width: 100%;
+    height: 100%;
     justify-items: center;
     align-items: center;
     text-align: center;
+    border: none;
+    outline: none;
 }
-.gallery div a h1{
+.gallery div button h1{
     position: absolute;
+    width: 100%;
     font-size: 3.5rem;
     color: var(--header_color);
     z-index: 100;
     transition: all 1s;
-    transform: translateY(400%);
+    transform: translateY(600%);
 }
 .gallery div:hover h1{
     transform: translateY(-50%);
@@ -489,7 +494,7 @@ header nav ul li a:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     color: gray;
     background: linear-gradient(90deg, transparent 0%, rgba(35,35,35,1) 45%, transparent 100%);;
 }
@@ -512,7 +517,7 @@ header nav ul li a:hover {
 }
 .container .social .contact_info .text_info p{
     font-size: 1.2rem;
-    margin: 1rem 0;
+    margin: 2rem 0;
 }
 
 
@@ -666,16 +671,12 @@ header nav ul li a:hover {
     .photography:hover .align_flex i{
         font-size: 8rem;
     }
-    .gallery div a h1{
+    .gallery div button h1{
         font-size: 3rem;
     }
     .container .social .contact_info .text_info p{
         font-size: 0.94rem;
         margin:2rem 0;
-    }
-    .container .social .contact_info{
-        width: 60%;
-        justify-content: center;
     }
     .container .social .contact_info .icons i{
         display: block;
@@ -720,7 +721,7 @@ header nav ul li a:hover {
     .li_visible{
         display: initial;
     }
-    .gallery div a h1{
+    .gallery div button h1{
         font-size: 2.5rem;
     }
     .contact{
@@ -735,7 +736,8 @@ header nav ul li a:hover {
         margin: 2rem 0;
         width: 100%;
     }
-    .container .container .contact_form{
+     
+    .contact .container .contact_form{
         margin: 5rem 0;
         width: 100%;
     }
@@ -747,37 +749,173 @@ header nav ul li a:hover {
     }
 }
 
-/* @media  screen and (max-width: 768px) {
-    .toggle{
-        display: initial;
+@media  screen and (max-width: 768px) {
+
+    .about .favio_container{
+        height: 50%;
+    }
+    .kind{
+        width: 33rem;
+    }
+    .drawing{
+        width: 15rem;
+        height: 15rem;
+        margin: 2rem 0 0;
+    }
+    .drawing:hover{
+        width: 15rem;
+        height: 15rem;
+    }
+    .drawing .align_flex i{
+        padding-top: 1rem;
+        font-size: 5rem;
+    }
+    .drawing:hover .align_flex i{
+        font-size: 6rem;
+    }
+    .drawing .align_flex h1{
+        font-size: 1.6rem;
+        padding-top: 1rem;
     }
     
-    header nav ul{
-        display: none;
+    .photography{
+        width: 15rem;
+        height: 15rem;
+        margin: 2rem 0 0;
+    }
+    .photography:hover{
+        width: 15rem;
+        height: 15rem;
+    }
+    .photography .align_flex i{
+        padding-top: 1rem;
+        font-size: 5rem;
+    }
+    .photography:hover .align_flex i{
+        font-size: 6rem;
+    }
+    .photography .align_flex h1{
+        font-size: 1.6rem;
+        padding-top: 1rem;
     }
     .gallery div a h1{
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
-    .contact{
-        height: 76.5625rem;
+    .about hr{
+        margin-top: 2rem;
     }
-    .contact .container{
-        margin: -15rem 0;
-        height: 90%;
+
+
+
+    .gallery{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
     }
-    .contact .container .social{
-        margin: 2rem 0;
+    .gallery hr{
+        background-color: var(--header_color);
+        width: .5%;
+        height: 60%;
+    }
+    .hr_left{
+        display: none;
+    }
+    .hr_right{
+        display: none;
+    }
+
+    .gallery div{
+        background: var(--header_color) ;
+        width: 80%;
+        height: 23%;
+        border-radius: 5px;
+        position: relative;
+        user-select: none;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        overflow: hidden;
+        transition: all 1s;
+    }
+
+    .gallery div button{
+        border: none;
         width: 100%;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
     }
-    .container .container .contact_form{
-        margin: 5rem 0;
-        width: 100%;
-    }
-    .contact .container .contact_form form h1{
+    .gallery div button h1{
         font-size: 2.5rem;
     }
-} */
+    .gallery div:hover h1{
+        transform: translateY(-50%);
+    }
+
+    .gallery div hr{
+        border: none;
+        width: 100%;
+        height: .4rem;
+        position: absolute;
+        background: var(--header_color);
+        z-index: 100;
+    }
+    .gallery div .hr_top{
+        top: 125%;
+        transition: all 1s;
+    }
+    .gallery div:hover .hr_top{
+        top: 25%;
+    }
+    .gallery div .hr_bottom{
+        bottom: -75%;
+        transition: all 1s;
+    }
+    .gallery div:hover .hr_bottom{
+        bottom: 25%;
+    }
+
+    .gallery div::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0,.5);
+        position: absolute;
+        transform: translateY(100%);
+        transition: 1s;
+    }
+    .gallery div:hover:after{
+        transform: translateY(0);
+    }
+    .gallery .city img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+    }
+
+    .gallery .desert img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+    }
+
+    .gallery .draws img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+    }
+
+
+}
+
+/* HEIGHT */
 
 @media  screen and (max-height: 680px) {
     
