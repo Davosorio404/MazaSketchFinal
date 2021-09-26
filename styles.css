@@ -282,7 +282,6 @@ header nav ul li a:hover {
 }
 .favio_info{
     width: 60%;
-    max-height: 100%;
     margin: 3rem 5rem 3rem 2rem;
     border-left: .5rem solid white;
     padding: 1rem 0 1rem 3rem; 
@@ -752,7 +751,25 @@ header nav ul li a:hover {
 @media  screen and (max-width: 768px) {
 
     .about .favio_container{
+        width: 90%;
         height: 50%;
+        flex-direction: column;
+        border-radius: 190px 0 10px 10px;
+    }
+    .about{
+        height: auto;
+    }
+    .favio_container .favio_img{
+        width: 100%;
+        height: 20rem;
+    }
+    .favio_container .favio_img img{
+        object-position: 0 30%;
+    }
+    .favio_info{
+        width: 80%;
+        margin: 3.5rem 2rem 3rem 1rem;
+        padding: 1rem 0 1rem 2.5rem; 
     }
     .kind{
         width: 33rem;
@@ -805,8 +822,6 @@ header nav ul li a:hover {
         margin-top: 2rem;
     }
 
-
-
     .gallery{
         width: 100vw;
         height: 100vh;
@@ -850,7 +865,7 @@ header nav ul li a:hover {
         cursor: pointer;
     }
     .gallery div button h1{
-        font-size: 2.5rem;
+        font-size: 2.4rem;
     }
     .gallery div:hover h1{
         transform: translateY(-50%);
@@ -915,30 +930,192 @@ header nav ul li a:hover {
 
 }
 
+@media  screen and (max-width: 588px){
+  .kind {
+    width: 18.505625rem ;
+    flex-direction: column;
+  }
+  .gallery div button h1{
+    font-size: 2.3rem;
+  }
+}
+
+@media  screen and (max-width: 529px){
+    .text h1{
+        font-size: 4rem;
+        font-weight: 400;
+    }
+    .text h2{
+        font-size: 1rem;
+        font-weight: 100;
+    }
+    .contact .container{
+        width: 100%;
+    }
+
+    .gallery div .hr_top{
+        top: 120%;
+        transition: all 1s;
+    }
+    .gallery div:hover .hr_top{
+        top: 20%;
+    }
+    .gallery div .hr_bottom{
+        bottom: -80%;
+        transition: all 1s;
+    }
+    .gallery div:hover .hr_bottom{
+        bottom: 20%;
+    }
+    .container .social .contact_info .text_info p{
+        font-size: 1rem;
+        margin: 1.6rem 0;
+    }
+    .container .social .contact_info .icons i{
+        font-size: 2rem;
+        margin: 1rem 0;
+    }
+    
+}
+@media screen and (max-width: 320px) {
+      .text h1{
+        font-size: 3.5rem;
+        font-weight: 400;
+    }
+    .text h2{
+        font-size: 0.8rem;
+        font-weight: 100;
+    }
+    .container .social .contact_info .text_info p{
+        font-size: 0.8rem;
+        margin: 1.4rem 0;
+    }
+    .container .social .contact_info .icons i{
+        font-size: 1.8rem;
+        margin: 1rem 0;
+    }
+}
+
+
+
 /* HEIGHT */
 
-@media  screen and (max-height: 680px) {
+@media  screen and (max-height: 680px){
+  header nav ul li a {
+        font-size: 1.2rem;
+        font-weight: 100;
+    }
+    .text h1{
+        font-size: 4rem;
+        font-weight: 400;
+    }
+    .text h2{
+        font-size: 1.1rem;
+    }
+    .button{
+        font-size: 2rem;
+    }
+    .favio_container{
+        margin: 2rem 0 0 0;
+        border-radius: 170px 0 170px 0;
+    }
+
+    .favio_container .favio_info{
+        padding: .5rem 0 .5rem 2rem;
+    }
+    .kind{
+        width: 35%;
+    }
+    .drawing{
+        width: 13rem;
+        height: 13rem;
+        margin: 2rem 0 0;
+    }
+    .drawing:hover{
+        width: 15rem;
+        height: 15rem;
+    }
+    .drawing .align_flex i{
+        padding-top: 1rem;
+        font-size: 5rem;
+    }
+    .drawing:hover .align_flex i{
+        font-size: 6rem;
+    }
+    .drawing .align_flex h1{
+        font-size: 1.6rem;
+        padding-top: 1rem;
+    }
+    
+    .photography{
+        width: 13rem;
+        height: 13rem;
+        margin: 2rem 0 0;
+    }
+    .photography:hover{
+        width: 15rem;
+        height: 15rem;
+    }
+    .photography .align_flex i{
+        padding-top: 1rem;
+        font-size: 5rem;
+    }
+    .photography:hover .align_flex i{
+        font-size: 6rem;
+    }
+    .photography .align_flex h1{
+        font-size: 1.6rem;
+        padding-top: 1rem;
+    }
+    .about hr{
+        margin-top: 2rem;
+    }
+
+    .gallery div button h1{
+        font-size: 3rem;
+    }
+    
+    .container .social .contact_info .text_info p{
+        font-size: 0.94rem;
+        margin:2rem 0;
+    }
+    .container .social .contact_info .icons i{
+        display: block;
+        font-size: 2.8rem;
+        margin: 1rem 0;
+        color: #33456F;
+    }
+    .contact .container .contact_form form h1{
+        font-size: 3rem;
+    }
+}
+
+@media  screen and (max-height: 680px) and (max-width: 440px) {
     
     header nav ul li a {
         font-size: 1.2rem;
         font-weight: 100;
     }
     .text h1{
-        font-size: 4.3rem;
+        font-size: 4rem;
         font-weight: 400;
     }
     .text h2{
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
     .button{
         font-size: 2rem;
     }
     .favio_container{
-        margin: 4rem 0 0 0;
+        margin: 2rem 0 0 0;
         border-radius: 170px 0 170px 0;
     }
+
+    .favio_container .favio_info{
+        padding: .5rem 0 .5rem 2rem;
+    }
     .kind{
-        width: 30rem;
+        width: 18.505625rem;
     }
     .drawing{
         width: 13rem;
@@ -987,6 +1164,10 @@ header nav ul li a:hover {
     .about hr{
         margin-top: 2rem;
     }
+
+    .gallery div button h1{
+        font-size: 1.6rem;
+    }
     
     .contact{
         height: 76.5625rem;
@@ -1000,6 +1181,9 @@ header nav ul li a:hover {
         margin: 2rem 0;
         width: 100%;
     }
+    .contact .container .social .contact_info{
+        width: 100%;
+    }
     .container .container .contact_form{
         margin: 5rem 0;
         width: 100%;
@@ -1008,7 +1192,7 @@ header nav ul li a:hover {
         font-size: 2.5rem;
     }
     .container .social .contact_info .text_info p{
-        font-size: 1.3rem;
+        font-size: .8rem;
     }
 
 }
